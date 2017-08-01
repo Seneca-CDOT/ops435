@@ -52,7 +52,7 @@ class lab0a(unittest.TestCase):
     def test_c(self):
         """[Lab 1] - [Investigation 1] - [Part 1] - installing linux - correct hostname"""
         hostname = socket.gethostname()
-        self.assertEqual(hostname, 'centos', msg='place holder')
+        self.assertEqual(hostname, 'centos7', msg='place holder')
 
 class lab0b(unittest.TestCase):
     """All test cases for lab0b - installing software"""
