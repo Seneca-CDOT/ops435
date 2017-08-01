@@ -223,7 +223,7 @@ class lab2d(unittest.TestCase):
         p = subprocess.Popen(['/usr/bin/python3', './lab2d.py' ], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
         # Fail test if output is different from expected_output
-        expected_output = b'Usage: ./lab2d.py [name] [age]\n'
+        expected_output = b'Usage: ./lab2d.py name age\n'
         error_output = 'wrong output for number of args(HINT: use if statements for catching conditions, such as 0 arguments)'
         self.assertEqual(stdout, expected_output, msg=error_output)
     
@@ -233,7 +233,7 @@ class lab2d(unittest.TestCase):
         p = subprocess.Popen(['/usr/bin/python3', './lab2d.py', 'Jon' ], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
         # Fail test if output is different from expected_output
-        expected_output = b'Usage: ./lab2d.py [name] [age]\n'
+        expected_output = b'Usage: ./lab2d.py name age\n'
         error_output = 'wrong output for number of args(HINT: use if and elif statements for catching conditions, such as 1 argument)'
         self.assertEqual(stdout, expected_output, msg=error_output)
     
@@ -253,7 +253,7 @@ class lab2d(unittest.TestCase):
         p = subprocess.Popen(['/usr/bin/python3', './lab2d.py', 'Jon', '20', 'More' ], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
         # Fail test if output is different from expected_output
-        expected_output = b'Usage: ./lab2d.py [name] [age]\n'
+        expected_output = b'Usage: ./lab2d.py name age\n'
         error_output = 'wrong output for number of args(HINT: use the > or < signs in if statements, test for more then 2 arguments)'
         self.assertEqual(stdout, expected_output, msg=error_output)
 
