@@ -123,7 +123,7 @@ class lab0c(unittest.TestCase):
         except:
             error_output = 'make sure ~/.ipython/profile_default/startup/00-alias.ipy exists'
         error_output = 'make sure ~/.ipython/profile_default/startup/00-alias.ipy has the correct contents'
-        self.assertEqual(line, 'alias vim vim', msg=error_output)
+        self.assertEqual(line, '%alias vim vim', msg=error_output)
     
     def test_b(self):
         """[Lab 1] - [Investigation 2] - [Part 1] - ipython - ipython configuration"""
