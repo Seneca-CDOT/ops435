@@ -75,7 +75,30 @@ class lab5a(unittest.TestCase):
             import lab5a as lab5aStudent
         except:
             self.fail('lab5a.py contains errors(HINT: run the function and fix errors')
-        error_output = 'incorrect output(HINT: make sure your function removes new line characters and exact output)'
+        error_output = 'incorrect output(HINT: there is an extra item in the list, do no use split() to create the list)'
+        filename = 'data.txt'
+        answer = ['Hello World', 'This is the second line', 'Third line', 'Last line', '']
+        self.assertNotEqual(lab5aStudent.read_file_list(filename), answer, msg=error_output)
+    
+    def test_g_function_read_file_list_correct_output(self):
+        """[Lab 5] - [Investigation X] - [Part X] - Files - Test for output: ./lab5X.py"""
+        try:
+            import lab5a as lab5aStudent
+        except:
+            self.fail('lab5a.py contains errors(HINT: run the function and fix errors')
+        error_output = 'incorrect output(HINT: the items in the list have new-line characters in them try removing them with strip())'
+        filename = 'data.txt'
+        answer = ['Hello World\n', 'This is the second line\n', 'Third line\n', 'Last line\n']
+        self.assertNotEqual(lab5aStudent.read_file_list(filename), answer, msg=error_output)
+
+
+    def test_h_function_read_file_list_correct_output(self):
+        """[Lab 5] - [Investigation X] - [Part X] - Files - Test for output: ./lab5X.py"""
+        try:
+            import lab5a as lab5aStudent
+        except:
+            self.fail('lab5a.py contains errors(HINT: run the function and fix errors')
+        error_output = 'incorrect output(HINT: make sure your function has the exact output)'
         filename = 'data.txt'
         answer = ['Hello World', 'This is the second line', 'Third line', 'Last line']
         self.assertEqual(lab5aStudent.read_file_list(filename), answer, msg=error_output)
@@ -387,13 +410,13 @@ def CheckForUpdates():
         lab_name = 'CheckLab5.py'
         lab_num = 'lab5'
         print('Checking for updates...')
-        if ChecksumLatest(url='http://matrix.senecac.on.ca/~acoatley-willis/' + lab_name) != ChecksumLocal(filename='./' + lab_name):
+        if ChecksumLatest(url='https://raw.githubusercontent.com/Seneca-CDOT/ops435/master/LabCheckScripts/' + lab_name) != ChecksumLocal(filename='./' + lab_name):
             print()
             print(' There is a update available for ' + lab_name + ' please consider updating:')
             print(' cd ~/ops435/' + lab_num + '/')
             print(' pwd  #   <-- i.e. confirm that you are in the correct directory')
             print(' rm ' + lab_name)
-            print(' ls ' + lab_name + ' || wget matrix.senecac.on.ca/~acoatley-willis/' + lab_name)
+            print(' ls ' + lab_name + ' || wget https://raw.githubusercontent.com/Seneca-CDOT/ops435/master/LabCheckScripts/' + lab_name)
             print()
             return
         print('Running latest version...')

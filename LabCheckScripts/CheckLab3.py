@@ -513,13 +513,13 @@ def CheckForUpdates():
         lab_name = 'CheckLab3.py'
         lab_num = 'lab3'
         print('Checking for updates...')
-        if ChecksumLatest(url='http://matrix.senecac.on.ca/~acoatley-willis/' + lab_name) != ChecksumLocal(filename='./' + lab_name):
+        if ChecksumLatest(url='https://raw.githubusercontent.com/Seneca-CDOT/ops435/master/LabCheckScripts/' + lab_name) != ChecksumLocal(filename='./' + lab_name):
             print()
             print(' There is a update available for ' + lab_name + ' please consider updating:')
             print(' cd ~/ops435/' + lab_num + '/')
             print(' pwd  #   <-- i.e. confirm that you are in the correct directory')
             print(' rm ' + lab_name)
-            print(' ls ' + lab_name + ' || wget matrix.senecac.on.ca/~acoatley-willis/' + lab_name)
+            print(' ls ' + lab_name + ' || wget https://raw.githubusercontent.com/Seneca-CDOT/ops435/master/LabCheckScripts/' + lab_name)
             print()
             return
         print('Running latest version...')

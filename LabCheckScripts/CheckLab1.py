@@ -294,7 +294,7 @@ class lab1d(unittest.TestCase):
         error_output = 'output is not correct(HINT: the program must have the exact output, this includes every space and symbol)'
         self.assertEqual(stdout, expected_output, msg=error_output)
     
-
+   
 def ChecksumLatest(url=None):
     dat = ''
     with urllib.request.urlopen(url) as response:
@@ -317,15 +317,17 @@ def ChecksumLocal(filename=None):
 
 def CheckForUpdates():
     try:
+        lab_name = 'CheckLab1.py'
+        lab_num = 'lab1'
         print('Checking for updates...')
-        if ChecksumLatest(url='http://matrix.senecac.on.ca/~acoatley-willis/CheckLab1.py') != ChecksumLocal(filename='./CheckLab1.py'):
-            print('''
-            There is a update available for this CheckLab1.py please consider updating:
-            cd ~/ops435/lab1/
-            pwd  #   <-- i.e. confirm that you are in the correct directory
-            rm CheckLab1.py
-            ls CheckLab1.py || wget matrix.senecac.on.ca/~acoatley-willis/CheckLab1.py
-            ''')
+        if ChecksumLatest(url='https://raw.githubusercontent.com/Seneca-CDOT/ops435/master/LabCheckScripts/' + lab_name) != ChecksumLocal(filename='./' + lab_name):
+            print()
+            print(' There is a update available for this' + lab_name + ' please consider updating:')
+            print(' cd ~/ops435/' + lab_num + '/')
+            print(' pwd  #   <-- i.e. confirm that you are in the correct directory')
+            print(' rm ' + lab_name)
+            print(' ls ' + lab_name + ' || wget https://raw.githubusercontent.com/Seneca-CDOT/ops435/master/LabCheckScripts/' + lab_name)
+            print()
             return
         print('Running latest version...')
         return
@@ -334,7 +336,8 @@ def CheckForUpdates():
         print('No connection made...')
         print('Skipping updates...')
         return
-    
+
+
 if __name__ == '__main__':
     CheckForUpdates()
     wait = input('Press ENTER to run the Lab Check...')
