@@ -11,12 +11,12 @@ class lab4a(unittest.TestCase):
     """All test cases for lab4a - sets"""
     
     def test_0(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for file creation: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Data Structures - Test for file creation: ./lab4a.py"""
         error_output = 'your file cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab4a.py'), msg=error_output)
 
     def test_a(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for errors running: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Data Structures - Test for errors running: ./lab4a.py"""
         # Run students program
         p = subprocess.Popen(['/usr/bin/python3', './lab4a.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
@@ -26,7 +26,7 @@ class lab4a(unittest.TestCase):
         self.assertEqual(return_code, 0, msg=error_output)
 
     def test_a1(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for correct shebang line: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Data Structures - Test for correct shebang line: ./lab4a.py"""
         lab_file = open('./lab4a.py')
         first_line = lab_file.readline()
         lab_file.close()
@@ -35,25 +35,25 @@ class lab4a(unittest.TestCase):
 
 
     def test_a_function_join(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function join_sets() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function join_sets() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4a as lab4aStudent
             lab4aStudent.join_sets()
     
     def test_b_function_join(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function match_sets() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function match_sets() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4a as lab4aStudent
             lab4aStudent.match_sets()
     
     def test_c_function_join(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function diff_sets() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function diff_sets() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4a as lab4aStudent
             lab4aStudent.diff_sets()
 
     def test_d_function_join_sets(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function join_sets() joins sets together {1,2,3,4,5} and {2,1,0,-1,-2} """
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function join_sets() joins sets together {1,2,3,4,5} and {2,1,0,-1,-2} """
         # Try to import before testing
         try:
             import lab4a as lab4aStudent
@@ -65,7 +65,7 @@ class lab4a(unittest.TestCase):
         self.assertTrue(lab4aStudent.join_sets(set1,set2) == set1|set2, msg=error_output)
     
     def test_e_function_join_sets(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function join_sets() joins sets together"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function join_sets() joins sets together"""
         # Try to import before testing
         try:
             import lab4a as lab4aStudent
@@ -77,7 +77,7 @@ class lab4a(unittest.TestCase):
         self.assertTrue(lab4aStudent.join_sets(set1,set2) == set1|set2, msg=error_output)
 
     def test_f_function_match_sets(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function match_sets()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function match_sets()"""
         # Try to import before testing
         try:
             import lab4a as lab4aStudent
@@ -89,7 +89,7 @@ class lab4a(unittest.TestCase):
         self.assertTrue(lab4aStudent.match_sets(set1,set2) == set1&set2, msg=error_output)
 
     def test_g_function_match_sets(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function match_sets()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function match_sets()"""
         # Try to import before testing
         try:
             import lab4a as lab4aStudent
@@ -101,7 +101,7 @@ class lab4a(unittest.TestCase):
         self.assertTrue(lab4aStudent.match_sets(set1,set2) == set1&set2, msg=error_output)
     
     def test_h_function_diff_sets(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function diff_sets()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function diff_sets()"""
         # Try to import before testing
         try:
             import lab4a as lab4aStudent
@@ -113,7 +113,7 @@ class lab4a(unittest.TestCase):
         self.assertTrue(lab4aStudent.diff_sets(set1,set2) == set1^set2, msg=error_output)
 
     def test_i_function_diff_sets(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function diff_sets()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function diff_sets()"""
         # Try to import before testing
         try:
             import lab4a as lab4aStudent
@@ -129,12 +129,12 @@ class lab4b(unittest.TestCase):
     """All test cases for lab4b - sets"""
 
     def test_0(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for file creation: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Data Structures - Test for file creation: ./lab4b.py"""
         error_output = 'your file cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab4b.py'), msg=error_output)
 
     def test_a(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for errors running: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Data Structures - Test for errors running: ./lab4b.py"""
         # Run students program
         p = subprocess.Popen(['/usr/bin/python3', './lab4b.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
@@ -144,7 +144,7 @@ class lab4b(unittest.TestCase):
         self.assertEqual(return_code, 0, msg=error_output)
 
     def test_a1(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for correct shebang line: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Data Structures - Test for correct shebang line: ./lab4b.py"""
         lab_file = open('./lab4b.py')
         first_line = lab_file.readline()
         lab_file.close()
@@ -153,25 +153,25 @@ class lab4b(unittest.TestCase):
 
 
     def test_a_function_join(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function join_lists() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function join_lists() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4b as lab4bStudent
             lab4bStudent.join_lists()
 
     def test_b_function_join(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function match_lists() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function match_lists() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4b as lab4bStudent
             lab4bStudent.match_lists()
 
     def test_c_function_join(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function diff_lists() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function diff_lists() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4b as lab4bStudent
             lab4bStudent.diff_lists()
 
     def test_d_function_join_lists(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function join_lists() joins lists together {1,2,3,4,5} and {2,1,0,-1,-2} """
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function join_lists() joins lists together {1,2,3,4,5} and {2,1,0,-1,-2} """
         # Try to import before testing
         try:
             import lab4b as lab4bStudent
@@ -183,7 +183,7 @@ class lab4b(unittest.TestCase):
         self.assertTrue(lab4bStudent.join_lists(list1,list2) == list(set(list1)|set(list2)), msg=error_output)
 
     def test_e_function_join_lists(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function join_lists() joins lists together"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function join_lists() joins lists together"""
         # Try to import before testing
         try:
             import lab4b as lab4bStudent
@@ -195,7 +195,7 @@ class lab4b(unittest.TestCase):
         self.assertTrue(lab4bStudent.join_lists(list1,list2) == list(set(list1)|set(list2)), msg=error_output)
 
     def test_f_function_match_lists(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function match_lists()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function match_lists()"""
         # Try to import before testing
         try:
             import lab4b as lab4bStudent
@@ -207,7 +207,7 @@ class lab4b(unittest.TestCase):
         self.assertTrue(lab4bStudent.match_lists(list1,list2) == list(set(list1)&set(list2)), msg=error_output)
 
     def test_g_function_match_lists(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function match_lists()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function match_lists()"""
         # Try to import before testing
         try:
             import lab4b as lab4bStudent
@@ -219,7 +219,7 @@ class lab4b(unittest.TestCase):
         self.assertTrue(lab4bStudent.match_lists(list1,list2) == list(set(list1)&set(list2)), msg=error_output)
 
     def test_h_function_diff_lists(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function diff_lists()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function diff_lists()"""
         # Try to import before testing
         try:
             import lab4b as lab4bStudent
@@ -231,7 +231,7 @@ class lab4b(unittest.TestCase):
         self.assertTrue(lab4bStudent.diff_lists(list1,list2) == list(set(list1)^set(list2)), msg=error_output)
 
     def test_i_function_diff_lists(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Sets - function diff_lists()"""
+        """[Lab 4] - [Investigation 1] - [Part 2] - Sets - function diff_lists()"""
         # Try to import before testing
         try:
             import lab4b as lab4bStudent
@@ -247,12 +247,12 @@ class lab4c(unittest.TestCase):
     """All test cases for lab4c - dictionaries"""
 
     def test_0(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for file creation: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - Test for file creation: ./lab4c.py"""
         error_output = 'your file cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab4c.py'), msg=error_output)
 
     def test_a(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for errors running: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - Test for errors running: ./lab4c.py"""
         # Run students program
         p = subprocess.Popen(['/usr/bin/python3', './lab4c.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
@@ -262,7 +262,7 @@ class lab4c(unittest.TestCase):
         self.assertEqual(return_code, 0, msg=error_output)
 
     def test_a1(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - Test for correct shebang line: ./lab4X.py"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - Test for correct shebang line: ./lab4c.py"""
         lab_file = open('./lab4c.py')
         first_line = lab_file.readline()
         lab_file.close()
@@ -271,25 +271,25 @@ class lab4c(unittest.TestCase):
 
 
     def test_b_function_create_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function create_dictionary() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function create_dictionary() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4c as lab4cStudent
             lab4cStudent.create_dictionary()
     
     def test_c_function_split_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function split_dictionary() fails without 1 argument1"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary() fails without 1 argument1"""
         with self.assertRaises(Exception) as context:
             import lab4c as lab4cStudent
             lab4cStudent.split_dictionary()
 
     def test_d_function_shared_values(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function shared_values() fails without 2 arguments"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function shared_values() fails without 2 arguments"""
         with self.assertRaises(Exception) as context:
             import lab4c as lab4cStudent
             lab4cStudent.shared_values()
 
     def test_e_function_create_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function create_dictionary()"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function create_dictionary()"""
         # Try to import before testing
         try:
             import lab4c as lab4cStudent
@@ -302,7 +302,7 @@ class lab4c(unittest.TestCase):
         self.assertTrue(lab4cStudent.create_dictionary(list_keys,list_values) == dict_york, msg=error_output)
     
     def test_f_function_create_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function create_dictionary()"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function create_dictionary()"""
         # Try to import before testing
         try:
             import lab4c as lab4cStudent
@@ -315,7 +315,7 @@ class lab4c(unittest.TestCase):
         self.assertTrue(lab4cStudent.create_dictionary(list_keys,list_values) == dict_york, msg=error_output)
 
     def test_g_function_split_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function split_dictionary()"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary()"""
         # Try to import before testing
         try:
             import lab4c as lab4cStudent
@@ -329,7 +329,7 @@ class lab4c(unittest.TestCase):
         self.assertTrue(set(keys) == set(list_keys), msg=error_output)
     
     def test_h_function_split_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function split_dictionary()"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary()"""
         # Try to import before testing
         try:
             import lab4c as lab4cStudent
@@ -343,7 +343,7 @@ class lab4c(unittest.TestCase):
         self.assertTrue(set(values) == set(list_values), msg=error_output)
     
     def test_i_function_split_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function shared_values()"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function shared_values()"""
         # Try to import before testing
         try:
             import lab4c as lab4cStudent
@@ -355,7 +355,7 @@ class lab4c(unittest.TestCase):
         self.assertTrue(lab4cStudent.shared_values(dict1, dict2) == set(dict1.values())&set(dict2.values()), msg=error_output)
     
     def test_j_function_split_dictionary(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Data Structures - function shared_values()"""
+        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function shared_values()"""
         # Try to import before testing
         try:
             import lab4c as lab4cStudent
@@ -371,12 +371,12 @@ class lab4d(unittest.TestCase):
     """All test cases for lab4d - strings"""
 
     def test_0(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - Test for file creation: ./lab4X.py"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - Test for file creation: ./lab4d.py"""
         error_output = 'your file cannot be found(HINT: make sure you AND your file are in the correct directory)'
         self.assertTrue(os.path.exists('./lab4d.py'), msg=error_output)
 
     def test_a(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - Test for errors running: ./lab4X.py"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - Test for errors running: ./lab4d.py"""
         # Run students program
         p = subprocess.Popen(['/usr/bin/python3', './lab4d.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
@@ -386,7 +386,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(return_code, 0, msg=error_output)
 
     def test_a1(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - Test for correct shebang line: ./lab4X.py"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - Test for correct shebang line: ./lab4d.py"""
         lab_file = open('./lab4d.py')
         first_line = lab_file.readline()
         lab_file.close()
@@ -394,7 +394,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
     
     def test_b_function_first_five(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function first_five()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function first_five()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -410,7 +410,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(expected_output, output, msg=error_output)
 
     def test_c_function_first_five(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function first_five()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function first_five()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -423,7 +423,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(expected_output, output, msg=error_output)
     
     def test_d_function_last_seven(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function last_seven()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function last_seven()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -439,7 +439,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(expected_output, output, msg=error_output)
 
     def test_e_function_last_seven(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function last_seven()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function last_seven()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -455,7 +455,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(expected_output, output, msg=error_output)
 
     def test_f_function_middle_number(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function middle_number()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function middle_number()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -471,7 +471,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(expected_output, output, msg=error_output)
 
     def test_g_function_middle_number(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function middle_number()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function middle_number()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -487,7 +487,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(expected_output, output, msg=error_output)
 
     def test_h_function_first_three_last_three(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function first_three_last_three()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function first_three_last_three()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -503,7 +503,7 @@ class lab4d(unittest.TestCase):
         self.assertEqual(expected_output, output, msg=error_output)
     
     def test_i_function_first_three_last_three(self):
-        """[Lab 4] - [Investigation X] - [Part X] - Strings - function first_three_last_three()"""
+        """[Lab 4] - [Investigation 2] - [Part 1] - Strings - function first_three_last_three()"""
         # Try to import before testing
         try:
             import lab4d as lab4dStudent
@@ -517,66 +517,6 @@ class lab4d(unittest.TestCase):
         expected_output = 'Send!!'
         output = lab4dStudent.first_three_last_three(str2, str1)
         self.assertEqual(expected_output, output, msg=error_output)
-
-
-
-
-
-
-
-
-    
-
-class lab4e(unittest.TestCase):
-    """All test cases for lab4e - string formatting"""
-
-    def test_0(self):
-        """[Lab 4] - [Investigation X] - [Part X] - String Formatting - Test for file creation: ./lab4X.py"""
-        error_output = 'your file cannot be found(HINT: make sure you AND your file are in the correct directory)'
-        self.assertTrue(os.path.exists('./lab4e.py'), msg=error_output)
-
-    def test_a(self):
-        """[Lab 4] - [Investigation X] - [Part X] - String Formatting - Test for errors running: ./lab4X.py"""
-        # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab4e.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, err = p.communicate()
-        # Fail test if process returns a no zero exit status
-        return_code = p.wait()
-        error_output = 'your program exited with a error(HINT: make sure you copied the script exactly!)'
-        self.assertEqual(return_code, 0, msg=error_output)
-
-    def test_a1(self):
-        """[Lab 4] - [Investigation X] - [Part X] - String Formatting - Test for correct shebang line: ./lab4X.py"""
-        lab_file = open('./lab4e.py')
-        first_line = lab_file.readline()
-        lab_file.close()
-        error_output = 'your program does not have a shebang line(HINT: what should the first line contain)'
-        self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
-    
-    def test_b(self):
-        """[Lab 4] - [Investigation X] - [Part X] - String Formatting - Test for correct output: ./lab4X.py"""
-        # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab4e.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, err = p.communicate()
-        # Fail test if process returns a no zero exit status
-        return_code = p.wait()
-        expected_output = b'|-------------Seneca College-------------|\n|      Address          70 The Pond Rd   |\n|      Province               ON         |\n|    Postal Code            M3J3M6       |\n|        City              Toronto       |\n|      Country              Canada       |\n|----------------------------------------|\n'
-        error_output = 'your program does not have the correct output(HINT: )'
-        self.assertEqual(expected_output, stdout, msg=error_output)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def ChecksumLatest(url=None):
