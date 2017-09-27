@@ -380,8 +380,6 @@ class lab3e(unittest.TestCase):
         error_output = 'your program does not have a shebang line(HINT: what should the first line contain)'
         self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
 
-
-
     def test_b_function_first(self):
         """[Lab 3] - [Investigation 3] - [Part 1] - functions & lists - print first item in list"""
         try:
@@ -389,7 +387,7 @@ class lab3e(unittest.TestCase):
         except:
             self.fail('your script contains errors')
         expected_output = '100'
-        error_output = ''
+        error_output = 'your function must return a string value(HINT: use the str() function)'
         self.assertEqual(expected_output, lab3eStudent.give_first_item(), msg=error_output)
 
     def test_c_function_first_and_last(self):
