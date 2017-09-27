@@ -35,7 +35,7 @@ class lab4e(unittest.TestCase):
         self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
 
     def test_b(self):
-        """[Lab 4 Extras] - [Investigation 1] - [Part 2] - String Formatting - Test for correct output: ./lab4X.py"""
+        """[Lab 4 Extras] - [Investigation 1] - [Part 2] - String Formatting - Test for correct output: ./lab4e.py"""
         # Run students program
         p = subprocess.Popen(['/usr/bin/python3', './lab4e.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, err = p.communicate()
