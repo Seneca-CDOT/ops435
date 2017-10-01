@@ -234,7 +234,7 @@ class lab5b(unittest.TestCase):
             import lab5b as lab5bStudent
         except:
             self.fail('lab5b.py contains errors(HINT: run the function and fix errors')
-        error_output = 'incorrect output(HINT: )'
+        error_output = 'incorrect output(HINT: make sure output shows exactly)'
         filename = 'seneca2.txt.checkscript'
         list1 = ['Line 1', 'Line 2', 'Line 3']
         f = open(filename, 'w')
@@ -249,11 +249,12 @@ class lab5b(unittest.TestCase):
             import lab5b as lab5bStudent
         except:
             self.fail('lab5b.py contains errors(HINT: run the function and fix errors')
-        error_output = 'incorrect output(HINT: )'
+        error_output = 'incorrect output(HINT: make sure to write to file NOT append )'
         filename = 'seneca2.txt.checkscript'
         list1 = ['Line 1', 'Line 2', 'Line 5']
         f = open(filename, 'w')
         f.close()
+        lab5bStudent.write_file_list(filename, list1)
         lab5bStudent.write_file_list(filename, list1)
         answer = 'Line 1\nLine 2\nLine 5\n'
         self.assertEqual(lab5bStudent.read_file_string(filename), answer, msg=error_output)
@@ -264,9 +265,11 @@ class lab5b(unittest.TestCase):
             import lab5b as lab5bStudent
         except:
             self.fail('lab5b.py contains errors(HINT: run the function and fix errors')
-        error_output = 'incorrect output(HINT: )'
+        error_output = 'incorrect output(HINT: make sure output shows exactly)'
         filename = 'seneca2.txt.checkscript'
         tempfile = 'seneca3.txt.checkscript'
+        f = open(tempfile, 'w')
+        f.close()
         lab5bStudent.copy_file_add_line_numbers(filename, tempfile)
         answer = '1:Line 1\n2:Line 2\n3:Line 5\n'
         self.assertEqual(lab5bStudent.read_file_string(tempfile), answer, msg=error_output)
@@ -277,7 +280,23 @@ class lab5b(unittest.TestCase):
             import lab5b as lab5bStudent
         except:
             self.fail('lab5b.py contains errors(HINT: run the function and fix errors')
-        error_output = 'incorrect output(HINT: )'
+        error_output = 'incorrect output(HINT: make sure to write to file NOT append )'
+        filename = 'seneca2.txt.checkscript'
+        tempfile = 'seneca3.txt.checkscript'
+        f = open(tempfile, 'w')
+        f.close()
+        lab5bStudent.copy_file_add_line_numbers(filename, tempfile)
+        lab5bStudent.copy_file_add_line_numbers(filename, tempfile)
+        answer = '1:Line 1\n2:Line 2\n3:Line 5\n'
+        self.assertEqual(lab5bStudent.read_file_string(tempfile), answer, msg=error_output)
+    
+    def test_k_function_copy_file_add_line_numbers_correct_output_3(self):
+        """[Lab 5] - [Investigation 1] - [Part 2] - Files - Test for output: ./lab5b.py"""
+        try:
+            import lab5b as lab5bStudent
+        except:
+            self.fail('lab5b.py contains errors(HINT: run the function and fix errors')
+        error_output = 'incorrect output(HINT: read instructions again and confirm code follows correctly)'
         filename = 'seneca3.txt.checkscript'
         tempfile = 'seneca4.txt.checkscript'
         lab5bStudent.copy_file_add_line_numbers(filename, tempfile)
