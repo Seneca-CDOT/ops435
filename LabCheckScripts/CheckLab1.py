@@ -113,18 +113,6 @@ class lab0b(unittest.TestCase):
 class lab0c(unittest.TestCase):
     """All test cases for lab0c - ipython alias and confirguration"""
     
-    def test_a(self):
-        """[Lab 1] - [Investigation 2] - [Part 1] - ipython - ipython alias"""
-        line = ''
-        try:
-            f = open(os.path.expanduser('~/.ipython/profile_default/startup/00-alias.ipy'))
-            line = f.read().strip()
-            f.close()
-        except:
-            error_output = 'make sure ~/.ipython/profile_default/startup/00-alias.ipy exists'
-        error_output = 'make sure ~/.ipython/profile_default/startup/00-alias.ipy has the correct contents'
-        self.assertEqual(line, '%alias vim vim', msg=error_output)
-    
     def test_b(self):
         """[Lab 1] - [Investigation 2] - [Part 1] - ipython - ipython configuration"""
         self.assertEqual(1, 1, msg='place holder')
