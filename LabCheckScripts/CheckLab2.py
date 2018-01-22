@@ -27,44 +27,44 @@ import os
 import hashlib
 import urllib.request
 
-class lab2a(unittest.TestCase):
-    """All test cases for lab2a - variables & printing"""
+#~ class lab2a(unittest.TestCase):
+    #~ """All test cases for lab2a - variables & printing"""
 
-    def test_0(self):
-        """[Lab 2] - [Investigation 1] - [Part 1] - variables & printing - Test for file creation: ./lab2a.py"""
-        error_output = 'your file cannot be found(HINT: make sure you AND your file are in the correct directory)'
-        self.assertTrue(os.path.exists('./lab2a.py'), msg=error_output)
+    #~ def test_0(self):
+        #~ """[Lab 2] - [Investigation 1] - [Part 1] - variables & printing - Test for file creation: ./lab2a.py"""
+        #~ error_output = 'your file cannot be found(HINT: make sure you AND your file are in the correct directory)'
+        #~ self.assertTrue(os.path.exists('./lab2a.py'), msg=error_output)
     
-    def test_a(self):
-        """[Lab 2] - [Investigation 1] - [Part 1] - variables & printing - Test for errors running: ./lab2a.py"""
-        # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab2a.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, err = p.communicate()
-        # Fail test if process returns a no zero exit status
-        return_code = p.wait()
-        error_output = 'your program exited with a error(HINT: try running your program to see the error)'
-        self.assertEqual(return_code, 0, msg=error_output)
+    #~ def test_a(self):
+        #~ """[Lab 2] - [Investigation 1] - [Part 1] - variables & printing - Test for errors running: ./lab2a.py"""
+        #~ # Run students program
+        #~ p = subprocess.Popen(['/usr/bin/python3', './lab2a.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+        #~ stdout, err = p.communicate()
+        #~ # Fail test if process returns a no zero exit status
+        #~ return_code = p.wait()
+        #~ error_output = 'your program exited with a error(HINT: try running your program to see the error)'
+        #~ self.assertEqual(return_code, 0, msg=error_output)
 
-    def test_a1(self):
-        """[Lab 2] - [Investigation X] - [Part X] - variables & printing - Test for correct shebang line: ./lab2X.py"""
-        lab_file = open('./lab2a.py')
-        first_line = lab_file.readline()
-        lab_file.close()
-        error_output = 'your program does not have a shebang line(HINT: what should the first line contain)'
-        self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
-
-
+    #~ def test_a1(self):
+        #~ """[Lab 2] - [Investigation X] - [Part X] - variables & printing - Test for correct shebang line: ./lab2X.py"""
+        #~ lab_file = open('./lab2a.py')
+        #~ first_line = lab_file.readline()
+        #~ lab_file.close()
+        #~ error_output = 'your program does not have a shebang line(HINT: what should the first line contain)'
+        #~ self.assertEqual(first_line.strip(), '#!/usr/bin/env python3', msg=error_output)
 
 
-    def test_b(self):
-        """variables & printing - Test output for correct output "Hi Jon, you are 20 years old.": ./lab2a.py"""
-        # Run students program
-        p = subprocess.Popen(['/usr/bin/python3', './lab2a.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, _ = p.communicate()
-        # Fail test if output is different from expected_output
-        expected_output = b'Hi Jon, you are 20 years old.\n'
-        error_output = 'output is not correct(HINT: pay attention to uppercase letters, spaces, and punctuation)'
-        self.assertEqual(stdout, expected_output, msg=error_output)
+
+
+    #~ def test_b(self):
+        #~ """variables & printing - Test output for correct output "Hi Jon, you are 20 years old.": ./lab2a.py"""
+        #~ # Run students program
+        #~ p = subprocess.Popen(['/usr/bin/python3', './lab2a.py'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+        #~ stdout, _ = p.communicate()
+        #~ # Fail test if output is different from expected_output
+        #~ expected_output = b'Hi Jon, you are 20 years old.\n'
+        #~ error_output = 'output is not correct(HINT: pay attention to uppercase letters, spaces, and punctuation)'
+        #~ self.assertEqual(stdout, expected_output, msg=error_output)
     
 
 class lab2b(unittest.TestCase):
