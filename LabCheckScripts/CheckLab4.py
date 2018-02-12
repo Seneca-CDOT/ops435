@@ -276,11 +276,11 @@ class lab4c(unittest.TestCase):
             import lab4c as lab4cStudent
             lab4cStudent.create_dictionary()
     
-    def test_c_function_split_dictionary(self):
-        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary() fails without 1 argument1"""
-        with self.assertRaises(Exception) as context:
-            import lab4c as lab4cStudent
-            lab4cStudent.split_dictionary()
+    #~ def test_c_function_split_dictionary(self):
+        #~ """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary() fails without 1 argument1"""
+        #~ with self.assertRaises(Exception) as context:
+            #~ import lab4c as lab4cStudent
+            #~ lab4cStudent.split_dictionary()
 
     def test_d_function_shared_values(self):
         """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function shared_values() fails without 2 arguments"""
@@ -314,33 +314,33 @@ class lab4c(unittest.TestCase):
         list_values = ['70 The Pond Rd', 'Toronto', 'United States', 'M3J3M6', 'BC']
         self.assertTrue(lab4cStudent.create_dictionary(list_keys,list_values) == dict_york, msg=error_output)
 
-    def test_g_function_split_dictionary(self):
-        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary()"""
-        # Try to import before testing
-        try:
-            import lab4c as lab4cStudent
-        except:
-            self.fail('lab4c.py contains errors(HINT: run the function and fix errors')
-        error_output = 'problem with function(HINT:))'
-        dict_york = {'Address': '70 The Pond Rd', 'City': 'Toronto', 'Country': 'United States', 'Postal Code': 'M3J3M6', 'Province': 'BC'}
-        list_keys = ['Address', 'City', 'Country', 'Postal Code', 'Province']
-        list_values = ['70 The Pond Rd', 'Toronto', 'United States', 'M3J3M6', 'BC']
-        keys, values = lab4cStudent.split_dictionary(dict_york)
-        self.assertTrue(set(keys) == set(list_keys), msg=error_output)
+    #~ def test_g_function_split_dictionary(self):
+        #~ """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary()"""
+        #~ # Try to import before testing
+        #~ try:
+            #~ import lab4c as lab4cStudent
+        #~ except:
+            #~ self.fail('lab4c.py contains errors(HINT: run the function and fix errors')
+        #~ error_output = 'problem with function(HINT:))'
+        #~ dict_york = {'Address': '70 The Pond Rd', 'City': 'Toronto', 'Country': 'United States', 'Postal Code': 'M3J3M6', 'Province': 'BC'}
+        #~ list_keys = ['Address', 'City', 'Country', 'Postal Code', 'Province']
+        #~ list_values = ['70 The Pond Rd', 'Toronto', 'United States', 'M3J3M6', 'BC']
+        #~ keys, values = lab4cStudent.split_dictionary(dict_york)
+        #~ self.assertTrue(set(keys) == set(list_keys), msg=error_output)
     
-    def test_h_function_split_dictionary(self):
-        """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary()"""
-        # Try to import before testing
-        try:
-            import lab4c as lab4cStudent
-        except:
-            self.fail('lab4c.py contains errors(HINT: run the function and fix errors')
-        error_output = 'problem with function(HINT:))'
-        dict_york = {'Address': '70 The Pond Rd', 'City': 'Toronto', 'Country': 'United States', 'Postal Code': 'M3J3M6', 'Province': 'BC'}
-        list_keys = ['Address', 'City', 'Country', 'Postal Code', 'Province']
-        list_values = ['70 The Pond Rd', 'Toronto', 'United States', 'M3J3M6', 'BC']
-        keys, values = lab4cStudent.split_dictionary(dict_york)
-        self.assertTrue(set(values) == set(list_values), msg=error_output)
+    #~ def test_h_function_split_dictionary(self):
+        #~ """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function split_dictionary()"""
+        #~ # Try to import before testing
+        #~ try:
+            #~ import lab4c as lab4cStudent
+        #~ except:
+            #~ self.fail('lab4c.py contains errors(HINT: run the function and fix errors')
+        #~ error_output = 'problem with function(HINT:))'
+        #~ dict_york = {'Address': '70 The Pond Rd', 'City': 'Toronto', 'Country': 'United States', 'Postal Code': 'M3J3M6', 'Province': 'BC'}
+        #~ list_keys = ['Address', 'City', 'Country', 'Postal Code', 'Province']
+        #~ list_values = ['70 The Pond Rd', 'Toronto', 'United States', 'M3J3M6', 'BC']
+        #~ keys, values = lab4cStudent.split_dictionary(dict_york)
+        #~ self.assertTrue(set(values) == set(list_values), msg=error_output)
     
     def test_i_function_split_dictionary(self):
         """[Lab 4] - [Investigation 1] - [Part 3] - Data Structures - function shared_values()"""
